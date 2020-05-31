@@ -25,6 +25,6 @@ Aplicación SPA de alimentos
 
 ## Iteración 2: filtrado de alimentos
 
-- Incluye un pequeño filtro de texto en el componente para mostrar aquellos alimentos cuyo nombre contenga el texto ingresado, en caso de no haber concurrencias, muestra *sin resultados*:
+- Incluye un pequeño filtro de texto en el componente para mostrar aquellos alimentos cuyo nombre contenga el texto ingresado, en caso de no haber concurrencias, muestra *sin resultados* ([ver referencia](https://res.cloudinary.com/ironhack-german/video/upload/v1590924407/vid3.gif)):
 
 ![gif1](https://res.cloudinary.com/ironhack-german/image/upload/v1590923818/_vid2.gif)
