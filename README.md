@@ -47,3 +47,10 @@ Aplicación SPA de alimentos
 - Incluye un pequeño filtro de texto en el componente para mostrar aquellos alimentos cuyo nombre contenga el texto ingresado, en caso de no haber concurrencias, muestra *sin resultados*:
 
 ![gif](https://res.cloudinary.com/ironhack-german/video/upload/e_loop/v1590924407/vid3.gif)
+
+
+## Iteración 4: producto de proximidad
+
+- Incluye una mención a *Proximidad* en las filas de aquellos productos que dispongan, entre sus países de origen (propiedad `origin` de cada producto), el país al que pertenece el usuario que haya iniciado sesión. Necesitarás transferirlo mediante una `prop` desde App a este componente para alcanzar el objetivo:
+
+![gif](https://res.cloudinary.com/ironhack-german/image/upload/v1590941896/Captura_de_pantalla_2020-05-31_a_las_18.17.01.png)
