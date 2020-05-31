@@ -24,9 +24,9 @@ Aplicación SPA de alimentos
 
 - Incluye este dato en el registro del usuario, eviando a la API el texto con el nombre del país seleccionado como `country` junto con `username` y `password`. Verfica que el usuario retornado tras el registro incluye el país que se ha seleccionado en la lista.
 
-- El componente `signup` pasará a disponer entonces de una interfaz de aspecto como el que sigue ([ver vídeo de referencia](https://res.cloudinary.com/ironhack-german/video/upload/v1590927049/vid5.gif)):
+- El componente `signup` pasará a disponer entonces de una interfaz de aspecto como el que sigue ([ver vídeo de referencia](https://res.cloudinary.com/ironhack-german/video/upload/e_loop/v1590927049/vid5.gif)):
 
-![img1](https://res.cloudinary.com/ironhack-german/video/upload/v1590927049/vid5.gif)
+![img1](https://res.cloudinary.com/ironhack-german/video/upload/e_loop/v1590927049/vid5.gif)
 <p>&nbsp;</p>
 <p>&nbsp;</p>
 
@@ -44,6 +44,6 @@ Aplicación SPA de alimentos
 
 ## Iteración 3: filtrado de alimentos
 
-- Incluye un pequeño filtro de texto en el componente para mostrar aquellos alimentos cuyo nombre contenga el texto ingresado, en caso de no haber concurrencias, muestra *sin resultados* ([ver vídeo de referencia](https://res.cloudinary.com/ironhack-german/video/upload/v1590924407/vid3.gif)):
+- Incluye un pequeño filtro de texto en el componente para mostrar aquellos alimentos cuyo nombre contenga el texto ingresado, en caso de no haber concurrencias, muestra *sin resultados* ([ver vídeo de referencia](https://res.cloudinary.com/ironhack-german/video/upload/e_loop/v1590924407/vid3.gif)):
 
-![gif](https://res.cloudinary.com/ironhack-german/video/upload/v1590924407/vid3.gif)
+![gif](https://res.cloudinary.com/ironhack-german/video/upload/e_loop/v1590924407/vid3.gif)
