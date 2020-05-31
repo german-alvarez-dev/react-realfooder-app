@@ -29,4 +29,4 @@ Aplicación SPA de alimentos
 
 - Incluye un pequeño filtro de texto en el componente para mostrar aquellos alimentos cuyo nombre contenga el texto ingresado, en caso de no haber concurrencias, muestra *sin resultados* ([ver vídeo de referencia](https://res.cloudinary.com/ironhack-german/video/upload/v1590924407/vid3.gif)):
 
-![gif1](https://res.cloudinary.com/ironhack-german/video/upload/v1590924407/vid3.gif)
+![gif](https://res.cloudinary.com/ironhack-german/video/upload/v1590924407/vid3.gif)
