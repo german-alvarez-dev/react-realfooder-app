@@ -17,4 +17,10 @@ Aplicación SPA de alimentos
 
 - El componente debe hacer una llamada a la API y mostrar los alimentos retornados en una interfaz de aspecto como el que sigue: 
 
-![img1](https://raw.githubusercontent.com/german-alvarez-dev/react-realfooder-app/master/public/s1.png?token=ALECHBD7IW377MVBYLOLY4K62OGGI)
+![img1](https://res.cloudinary.com/ironhack-german/image/upload/v1590923235/s1.png)
+
+## Iteración 2: filtrado de alimentos
+
+- Incluye un pequeño filtro de texto en el componente para mostrar aquellos alimentos cuyo nombre contenga el texto ingresado, en caso de no haber concurrencias, muestra *sin resultados*:
+![gif1](https://res.cloudinary.com/ironhack-german/video/upload/v1590922874/vid2.gif)
+
