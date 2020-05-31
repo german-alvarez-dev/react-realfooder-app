@@ -22,11 +22,11 @@ Aplicación SPA de alimentos
   - Guardar los países retornados en el estado del componente.
   - Iterarlos en la lista de selección para mostrar el nombre de cada país en cada `<option>`.
 
-- Incluye este dato en el registro del usuario, eviando el texto del nombre del país seleccionado a la API como la propiedad `country` junto con `username` y `password`. Verfica que el usuario retornado tras el registro incluye el país seleccionado en la lista.
+- Incluye este dato en el registro del usuario, eviando a la API el texto con el nombre del país seleccionado como `country` junto con `username` y `password`. Verfica que el usuario retornado tras el registro incluye el país que se ha seleccionado en la lista.
 
-- El componente `signup` pasará a disponer entonces de una interfaz de aspecto como el que sigue: 
+- El componente `signup` pasará a disponer entonces de una interfaz de aspecto como el que sigue ([ver vídeo de referencia](https://res.cloudinary.com/ironhack-german/video/upload/v1590927049/vid5.gif)):
 
-![img1](https://res.cloudinary.com/ironhack-german/image/upload/v1590923235/s1.png)
+![img1](https://res.cloudinary.com/ironhack-german/video/upload/v1590927049/vid5.gif)
 <p>&nbsp;</p>
 <p>&nbsp;</p>
 
