@@ -8,7 +8,7 @@ Aplicación SPA de alimentos
 
 - Clónate este repositorio e instala la aplicación.
 
-- Examina minuciosamente el producto: una SPA que incluye tanto una navegación inicial como una página de inicio y toda la gestión de registro, login y logout resuelta. Asimismo, dispones de las imágenes de los alimentos en el directorio `public/img`.
+- Examina minuciosamente el producto: una SPA que incluye tanto una navegación inicial como una página de inicio y toda la gestión de registro, login y logout resuelta.
 
 - Comprueba cómo tanto el login como el logout y el signup son funcionales y se encuentran conectados a una API en heroku, con URL base `https://reactr-realfooder.herokuapp.com/api/`
 <p>&nbsp;</p>
