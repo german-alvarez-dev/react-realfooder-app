@@ -1,8 +1,6 @@
 # React RealFooder SPA
 
 Aplicación SPA de alimentos
-<p>&nbsp;</p>
-<p>&nbsp;</p>
 
 ## Iteraciones
 
