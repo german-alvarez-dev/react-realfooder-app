@@ -23,7 +23,7 @@
 
 ## Iteration 3: info toast
 
-- Create a info toast component with a similar appearance as the showed below. Do not use any existing component (NPM, Bootstrap...), instead create it manually.
+- Create an info toast component with a similar appearance as the one below. Do not use any existing component (NPM, Bootstrap...), instead create it manually.
 - The info toast should appear when any of the actions are completed (_new item created successfully, item deleted sucessfully, item edited succesfully_):<p>&nbsp;</p>
 ![gif](https://res.cloudinary.com/ironhack-german/video/upload/e_loop/v1594138484/vid87.gif)
 
