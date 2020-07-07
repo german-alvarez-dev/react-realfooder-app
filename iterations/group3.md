@@ -16,7 +16,7 @@
 - When clicked, a modal window containing the product's info must appear. Reuse for this the same Form component and the same Bootstrap's Modal Window you developed to create new products.
 - Don't forget to change both the modal window title and the submit button text when editing.
 - After saving the edited item, the product list must be refresed:
-![gif](https://res.cloudinary.com/ironhack-german/video/upload/e_loop/v1594138087/vid89.gif)
+![gif](https://res.cloudinary.com/ironhack-german/video/upload/e_loop/v1594138484/vid87.gif)
 
 <p>&nbsp;</p>
 <p>&nbsp;</p>
