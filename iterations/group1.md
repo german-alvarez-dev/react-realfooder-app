@@ -22,7 +22,7 @@
 
 - Add this field on the info sent to the API during the signup process, as a `country` property containing the country name. This means that the API should receive 3 properties: `country`, `username` and `password`. Once done, verify the returned user object includes the selected country on the list. 
 
-- Now your `signup` shwould look as it follows:
+- Now your `signup` shwould look as it follows: <p>&nbsp;</p>
 
 ![img1](https://res.cloudinary.com/ironhack-german/video/upload/e_loop/v1590927049/vid5.gif)
 <p>&nbsp;</p>
@@ -34,7 +34,7 @@
 
 - Develop a `FoodsIndex` component under the `/alimentos` route, and include it on the Navbar to make it accesible for the user.
 
-- The component should call the API for the foods array (yup, that's done through a service!), rendering returned foods as it shows:
+- The component should call the API for the foods array (yup, that's done through a service!), rendering returned foods as it shows: <p>&nbsp;</p>
 
 ![img1](https://res.cloudinary.com/ironhack-german/image/upload/v1590923235/s1.png)
 <p>&nbsp;</p>
@@ -42,7 +42,7 @@
 
 ## Iteration 3: foods filter
 
-- Include a fancy text filter on the view to show those foods which name is or contains the typed text, on real time. In case there's no match, show some kind of _no results found_ message:
+- Include a fancy text filter on the view to show those foods which name is or contains the typed text, on real time. In case there's no match, show some kind of _no results found_ message: <p>&nbsp;</p>
 
 ![gif](https://res.cloudinary.com/ironhack-german/video/upload/e_loop/v1590924407/vid3.gif)
 <p>&nbsp;</p>
@@ -52,5 +52,6 @@
 
 - Show a _local product_ on each food when the logged in user's country matches with one of the countries contained on the `origin` food property. Obviously, this will only be shown for logged in users, and here's a clue: you can find the user's country stored on the `App` omponent state.
 - You can log in with User 1 (country: spain) or User 2 (country: france) on the app to help you archieve this iteration.
-- Finally, you'll have a product list similar to this:
+- Finally, you'll have a product list similar to this: <p>&nbsp;</p>
+
 ![gif](https://res.cloudinary.com/ironhack-german/image/upload/v1590941896/Captura_de_pantalla_2020-05-31_a_las_18.17.01.png)
