@@ -23,11 +23,11 @@
 
 ### Doughnut chart
 
-- Install the NPM package for the Doughnut Chart and, following the <a href="https://nivo.rocks/doughnut/">Nivo docs for this chart</a> compare the caloric intake between your foods selection: <p>&nbsp;</p>
+- Install the NPM package for the Pie Chart and, following the <a href="https://nivo.rocks/pie/">Nivo docs for this chart</a> compare the caloric intake between your foods selection: <p>&nbsp;</p>
  ![gif](https://res.cloudinary.com/ironhack-german/image/upload/v1595403897/Captura_de_pantalla_2020-07-22_a_las_9.28.08.png)
 
 ### Radio chart
 
-- Install the NPM package for the Radio Chart and, following the <a href="https://nivo.rocks/radio/">Nivo docs for this chart</a> compare the nutritional values related to fat, proteins and cabs of the selected foods: <p>&nbsp;</p>
+- Install the NPM package for the Radar Chart and, following the <a href="https://nivo.rocks/radar/">Nivo docs for this chart</a> compare the nutritional values related to fat, proteins and cabs of the selected foods: <p>&nbsp;</p>
 ![gif](https://res.cloudinary.com/ironhack-german/image/upload/v1595403897/Captura_de_pantalla_2020-07-22_a_las_9.28.17.png)
 
