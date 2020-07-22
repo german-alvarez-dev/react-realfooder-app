@@ -1,57 +1,56 @@
 # React RealFooder SPA
-
-Aplicación SPA de alimentos
 <p>&nbsp;</p>
 <p>&nbsp;</p>
 
 ## Iteración 0: preparación del entorno
 
-- Clónate este repositorio e instala la aplicación.
+- Clone this repo and install the dependences.
 
-- Examina minuciosamente el producto: una SPA que incluye tanto una navegación inicial como una página de inicio y toda la gestión de registro, login y logout resuelta.
+- Check thoughtfully the app: a SPA including the initial navigation, as well as the index page and the entire login, signup and logout system solved. 
 
-- Comprueba cómo tanto el login como el logout y el signup son funcionales y se encuentran conectados a una API en heroku, con URL base `https://reactr-realfooder.herokuapp.com/api/`
+- Test how signup, login and logout work correctly before starting to develop!
 <p>&nbsp;</p>
 <p>&nbsp;</p>
 
-## Iteración 1: país de usuario
-- Comprueba cómo el componente `signup` envía a la API los campos `username` y `password` del usuario tras su registro, retornando el nuevo usuario creado en la base de datos al que, a su vez, se le inicia sesión. Podrás ver que el usuario retornado dispone de una propiedad `country` con valor por defecto `undefined`.
+## Iteración 1: user country
+- When the user registers on the app, the Signup component sends the `username` and `password` to the API, returning the registered and logged in user object from the database. You'll see that each user has a `country` property with an `undefined` default value.
 
-- Incluye una lista desplegable en el formulario de registro con los países de origen de los usuarios, que se encuentran en la API bajo la URL https://reactr-realfooder.herokuapp.com/api/countries. Para completar esta iteración necesitarás:
-  - Crear en el componente los servicios específicos de los países e incluirlos junto con los servicios que ya figuran de autorización.
-  - Guardar los países retornados en el estado del componente.
-  - Iterarlos en la lista de selección para mostrar el nombre de cada país en cada `<option>`.
+- Include a select list on the signup form filled with one of the the available countries per option. Those countries are stored separately on the API under the `https://reactr-realfooder.herokuapp.com/api/countries` endpoint (GET). In order to complete this iteration you'll need to :
+  - Create the service related to the countries and instancing them on the component along with the auth services already included on it.
+  - Save the returned countries from the API on the state.
+  - Iterate them on the select list in order to show an `<option>` per country.
 
-- Incluye este dato en el registro del usuario, eviando a la API el texto con el nombre del país seleccionado como `country` junto con `username` y `password`. Verfica que el usuario retornado tras el registro incluye el país que se ha seleccionado en la lista.
+- Add this field on the info sent to the API during the signup process, as a `country` property containing the country name. This means that the API should receive 3 properties: `country`, `username` and `password`. Once done, verify the returned user object includes the selected country on the list. 
 
-- El componente `signup` pasará a disponer entonces de una interfaz de aspecto como el que sigue:
+- Now your `signup` shwould look as it follows:
 
 ![img1](https://res.cloudinary.com/ironhack-german/video/upload/e_loop/v1590927049/vid5.gif)
 <p>&nbsp;</p>
 <p>&nbsp;</p>
 
 
-## Iteración 2: listado de alimentos
-- La API dispone del endpoint https://reactr-realfooder.herokuapp.com/api/foods para retornar un JSON con todos los alimentos.
+## Iteration 2: foods list
+- You will use now the `https://reactr-realfooder.herokuapp.com/api/foods` endpoint (GET) to get a JSON with all the foods from the API.
 
-- Crea un componente `Foods-index` que sea renderizado en la URL `/alimentos`, e inclúyelo en la barra de navegación para que sea accedido por el usuario.
+- Develop a `FoodsIndex` component under the `/alimentos` route, and include it on the Navbar to make it accesible for the user.
 
-- El componente debe hacer una llamada a la API y mostrar los alimentos retornados en una interfaz de aspecto como el que sigue: 
+- The component should call the API for the foods array (yup, that's done through a service!), rendering returned foods as it shows:
 
 ![img1](https://res.cloudinary.com/ironhack-german/image/upload/v1590923235/s1.png)
 <p>&nbsp;</p>
 <p>&nbsp;</p>
 
-## Iteración 3: filtrado de alimentos
+## Iteration 3: foods filter
 
-- Incluye un pequeño filtro de texto en el componente para mostrar aquellos alimentos cuyo nombre contenga el texto ingresado, en caso de no haber concurrencias, muestra *sin resultados*:
+- Include a fancy text filter on the view to show those foods which name is or contains the typed text, on real time. In case there's no match, show some kind of _no results found_ message:
 
 ![gif](https://res.cloudinary.com/ironhack-german/video/upload/e_loop/v1590924407/vid3.gif)
 <p>&nbsp;</p>
 <p>&nbsp;</p>
 
-## Iteración 4: producto de proximidad
+## Iteration 4: local products
 
-- Incluye una mención a *Proximidad* en las filas de aquellos productos que dispongan, entre sus países de origen (propiedad `origin` de cada producto), el país al que pertenece el usuario que haya iniciado sesión. Necesitarás transferirlo mediante una `prop` desde App a este componente para alcanzar el objetivo:
-
+- Show a _local product_ on each food when the logged in user's country matches with one of the countries contained on the `origin` food property. Obviously, this will only be shown for logged in users, and here's a clue: you can find the user's country stored on the `App` omponent state.
+- You can log in with User 1 (country: spain) or User 2 (country: france) on the app to help you archieve this iteration.
+- Finally, you'll have a product list similar to this:
 ![gif](https://res.cloudinary.com/ironhack-german/image/upload/v1590941896/Captura_de_pantalla_2020-05-31_a_las_18.17.01.png)
