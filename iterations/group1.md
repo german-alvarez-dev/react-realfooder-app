@@ -2,7 +2,7 @@
 <p>&nbsp;</p>
 <p>&nbsp;</p>
 
-## Iteración 0: preparación del entorno
+## Iteration 0: set up the environment
 
 - Clone this repo and install the dependences.
 
@@ -12,7 +12,7 @@
 <p>&nbsp;</p>
 <p>&nbsp;</p>
 
-## Iteración 1: user country
+## Iteration 1: user country
 - When the user registers on the app, the Signup component sends the `username` and `password` to the API, returning the registered and logged in user object from the database. You'll see that each user has a `country` property with an `undefined` default value.
 
 - Include a select list on the signup form filled with one of the the available countries per option. Those countries are stored separately on the API under the `https://reactr-realfooder.herokuapp.com/api/countries` endpoint (GET). In order to complete this iteration you'll need to :
