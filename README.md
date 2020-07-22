@@ -34,6 +34,6 @@ You have two existent users on the database, in case you need them to make your 
 
 Have you created a bunch of food products that makes the application hard to manage? No worries! 
 
-In case you need to reboot the foods <a href="https://reactr-realfooder.herokuapp.com/api/reboot">proceed here</a>. The foods collection will be dropped and seeded with the default set of products. 
+In case you need to reboot the foods <a href="https://reactr-realfooder.herokuapp.com/api/foods/reboot">proceed here</a>. The foods collection will be dropped and seeded with the default set of products. 
 
 
