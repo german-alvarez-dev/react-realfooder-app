@@ -51,7 +51,9 @@
 ## Iteration 4: local products
 
 - Show a _local product_ on each food when the logged in user's country matches with one of the countries contained on the `origin` food property. Obviously, this will only be shown for logged in users, and here's a clue: you can find the user's country stored on the `App` omponent state.
+
 - You can log in with User 1 (country: spain) or User 2 (country: france) on the app to help you archieve this iteration.
+
 - Finally, you'll have a product list similar to this: <p>&nbsp;</p>
 
 ![gif](https://res.cloudinary.com/ironhack-german/image/upload/v1590941896/Captura_de_pantalla_2020-05-31_a_las_18.17.01.png)
