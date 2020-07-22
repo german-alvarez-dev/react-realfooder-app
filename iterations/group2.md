@@ -26,7 +26,7 @@
   | ------------- | ------------- | ------------- |
   | `name` | String | Product name  |
   | `description` | String | Product description  |
-  | `img` | String | Product image URL (you can use [this one](https://res.cloudinary.com/ironhack-german/image/upload/v1591033289/no-image.jpg)) if you wish  |
+  | `img` | String | Product image URL - you can use [this one](https://res.cloudinary.com/ironhack-german/image/upload/v1591033289/no-image.jpg) if you wish  |
   | `price` | Number | Product price  |
   | `kcal` | Number | Caloric intake  |
   | `protein` | Number | Protein intake  |
