@@ -1,6 +1,6 @@
 ## Iteration 1: data viz
 
-- Let's add some data visualization with <a href="https://nivo.rocks/">Nivo Rocks</a> (it truly _rocks_), an amazing data visualization package for React! 
+- Let's add some data visualization with <a href="https://nivo.rocks/">Nivo Rocks</a> (it truly _rocks_!), an amazing data visualization package for React! 
 - Create a route to `/estadisticas` showing a `FoodStats` component, and include the route on the Navbar so the user can access it.
 - Once mounted, bring the foods info on the component (remember, the same endpoint on the backend that you used on the foods list) and use the 5 first foods to render 3 charts as the ones below:
 ![gif](https://res.cloudinary.com/ironhack-german/video/upload/e_loop/v1595349354/mov85.gif)
