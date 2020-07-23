@@ -19,7 +19,7 @@
 
 - Install the NPM package for the Bar Chart and, following the <a href="https://nivo.rocks/bar/">Nivo docs for this chart</a> compare the nutritional values related to fat, proteins and cabs of the selected foods: <p>&nbsp;</p>
 
- ![gif](https://res.cloudinary.com/ironhack-german/image/upload/v1595403897/Captura_de_pantalla_2020-07-22_a_las_9.27.49.png)
+ ![gif](https://res.cloudinary.com/ironhack-german/image/upload/v1595488336/Captura_de_pantalla_2020-07-23_a_las_9.12.05.png)
 
 ### Doughnut & radio charts
 
