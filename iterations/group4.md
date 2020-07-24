@@ -23,7 +23,7 @@
 
 ### Pie & radio charts
 
-- Install the NPM package for the Pie Chart and, following the <a href="https://nivo.rocks/pie/">Nivo docs for this chart</a> compare the caloric intake between your foods selection. Proceed also with the  <a href="https://nivo.rocks/radar/">Readar Chart</a> to compare the nutritional values related to fat, proteins and carbs of your foods selection: <p>&nbsp;</p>
+- Install the NPM package for the Pie Chart and, following the <a href="https://nivo.rocks/pie/">Nivo docs for this chart</a> compare the caloric intake between your foods selection. Proceed also with the  <a href="https://nivo.rocks/radar/">Radar Chart</a> to compare the nutritional values related to fat, proteins and carbs of your foods selection: <p>&nbsp;</p>
 
  ![gif](https://res.cloudinary.com/ironhack-german/image/upload/v1595488086/Captura_de_pantalla_2020-07-23_a_las_9.07.00.png)
 
