@@ -20,6 +20,7 @@ You will need to use an API based on the `https://reactr-realfooder.herokuapp.co
   | `/foods`  | GET | All products  |
   | `/foods/details/:id` | GET | ID matching product's details  |
   | `/foods/newFood` | POST | Create new product  |
+  | `/foods/edit/:id` | PUT | Edit ID matching product  |
   | `/foods/delete/:id` | DELETE | Delete ID matching product  |
   
   
