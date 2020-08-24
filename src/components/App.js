@@ -9,6 +9,7 @@ import IndexPage from './pages/index/Index-page'
 
 import Signup from './pages/signup/Signup'
 import Login from './pages/login/Login'
+import AlimentosPage from './pages/alimentos/alimentos'
 
 import AuthService from '../service/auth.service'
 
@@ -42,6 +43,7 @@ class App extends Component {
                     <Route path="/" exact component={IndexPage} />
                     <Route path="/login" render={props => <Login {...props} setTheUser={this.setTheUser} />} />
                     <Route path="/signup" render={props => <Signup {...props} setTheUser={this.setTheUser} />} />
+                    <Route exact path="/alimentos" render={() => <AlimentosPage loggedInUser={this.state.loggedInUser} {...this.props} />} />
                 </Switch>
             </>
         )

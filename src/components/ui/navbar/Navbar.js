@@ -39,6 +39,8 @@ class Navigation extends Component {
 
                                 :
                                 <>
+                                    <Nav.Link as="div"><Link to="/alimentos">Alimentos</Link></Nav.Link>
+                                
                                     <Nav.Link as="div" onClick={this.logout}>Cerrar sesión</Nav.Link>
                                 </>
 

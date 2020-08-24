@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import AuthService from './../../../service/auth.service'
+import CountryService from '../../../service/country.service'
 
 import Container from 'react-bootstrap/Container'
 import Row from 'react-bootstrap/Row'
@@ -22,6 +23,18 @@ class Signup extends Component {
             errorMessage: ''
         }
         this.authService = new AuthService()
+        this.countryService = new CountryService()
+
+    }
+
+
+    componentDidMount = () => this.updateCountriesList()
+
+    updateCountriesList = () => {
+        this.countryService
+            .getAllCountries()
+            .then(response => this.setState({ countries: response.data }))
+            .catch(err => console.log(err))
     }
 
 
@@ -44,6 +57,7 @@ class Signup extends Component {
             .catch(err => console.log(err))
     }
 
+    
 
 
     render() {
@@ -67,6 +81,17 @@ class Signup extends Component {
                                 <Form.Label>Contraseña</Form.Label>
                                 <Form.Control name="password" type="password" value={this.state.password} onChange={this.handleInputChange} />
                             </Form.Group>
+
+                            <Form.Group controlId="cnty">
+                                <Form.Label>País</Form.Label>
+
+                                <Form.Control as="select" name="country" onChange={this.handleInputChange} />
+                                <option>Selecciona país</option>
+                                   {this.state.countries && this.state.countries.map(elm =>
+                                  <option value={elm._id} key={elm._id}> {elm.name} </option> )}
+
+                            </Form.Group>
+
 
                             <p
                                 className='error-message'
