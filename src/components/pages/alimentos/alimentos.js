@@ -4,9 +4,12 @@ import { Container } from 'react-bootstrap'
 import FoodsService from '../../../service/foods.service'
 import { Link } from 'react-router-dom'
 
+import FoodCard from './alimentos-card'
+
 import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
 
+import './alimentos.css'
 
 import Form from 'react-bootstrap/Form'
 
@@ -16,7 +19,7 @@ class AlimentosPage extends Component {
     constructor(props) {
         super(props)
         this.state = {
-            foods: undefined,
+            foods: [],
         }
         this.foodsService = new FoodsService()
     }
@@ -48,32 +51,29 @@ class AlimentosPage extends Component {
                     </Form.Group>
 
                 </Form> */}
+                {
+                    !this.state.foods ? <h3>CARGANDO</h3> :
 
-
-                {/* {this.state.foods.map(elm =>
-
-                    <Container>
                         <Row>
-                            <Col>
-                                <img style={{ width: 100 }} src={elm.img} alt="foto alimento" />
-                            </Col>
-                            <Col>
-                                <div>
-                                    <p>Nombre: {elm.name}</p>
-                                    <p>Precio: {elm.price}</p>
-                                    <p>Stock disponible: {elm.stock} uds.</p>
-                                    
-                                </div>
-                            </Col>
+                            {this.state.foods.map(elm =>
+
+                                <Col md={8}>
+
+                        
+                                    <div >
+                                        <img style={{ width: 50 }} src={elm.img}/>  Nombre: {elm.name}  Precio: {elm.price} |  Stock: {elm.stock}
+                                        <br></br>
+                                    </div>
+
+                                </Col>
+
+                            )}
+
                         </Row>
-                    </Container>
 
-                )} */}
-
-
-
-
+                }
             </Container>
+
         )
     }
 }

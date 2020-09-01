@@ -18,7 +18,8 @@ class Signup extends Component {
         this.state = {
             loginInfo: {
                 username: '',
-                password: ''
+                password: '',
+                country: '',
             },
             errorMessage: ''
         }

@@ -3,11 +3,11 @@ import axios from 'axios'
 export default class CountryService {
     constructor() {
         this.service = axios.create({
-            baseURL: 'https://reactr-realfooder.herokuapp.com/api/countries',
-            //withCredentials: true
+            baseURL: 'https://reactr-realfooder.herokuapp.com/api',
+            withCredentials: true
         })
     }
 
-    getAllCountries = () => this.service.get('/getAllCountries')
+    getAllCountries = () => this.service.get('/countries')
     
 }
