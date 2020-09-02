@@ -34,7 +34,7 @@
   | `carbs` | Number | Carbs intake  |
   | `stock` | Number | Product stock  |
   | `importTax` | Boolean | Import tax apply?  |
-  | `origin` | Array | Origin countries as an Array, taken from the comma-separated countries typed by the user on the form |
+  | `origin` | Array | Origin countries as an Array, one country per position taken from the comma-separated countries typed by the user on the form |
   | `owner_id` | String | Logged in user ID  |
   
 - After filling the form, the new product automatically shows on the products list:
