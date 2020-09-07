@@ -10,6 +10,9 @@ import IndexPage from './pages/index/Index-page'
 import Signup from './pages/signup/Signup'
 import Login from './pages/login/Login'
 import AlimentosPage from './pages/alimentos/alimentos'
+import FoodDetails from './pages/Food-details/food-details'
+import FoodForm from './pages/Food-form/index'
+
 
 import AuthService from '../service/auth.service'
 
@@ -44,6 +47,8 @@ class App extends Component {
                     <Route path="/login" render={props => <Login {...props} setTheUser={this.setTheUser} />} />
                     <Route path="/signup" render={props => <Signup {...props} setTheUser={this.setTheUser} />} />
                     <Route exact path="/alimentos" render={() => <AlimentosPage loggedInUser={this.state.loggedInUser} {...this.props} />} />
+                    <Route path="/details/:food_id" render={props => <FoodDetails {...props} />} />
+                    <Route path="/foods/newFood" render={() => <FoodForm />} />
                 </Switch>
             </>
         )

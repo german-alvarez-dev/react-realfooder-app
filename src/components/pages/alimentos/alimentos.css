@@ -2,3 +2,27 @@
     width: 50px;
     object-fit: cover;
 }
+
+.tablefood {
+   
+    text-align: left;
+    margin-bottom: 0;  
+    
+}
+
+.tablefood img{
+    text-align: center;
+}
+
+.tablefood td {
+    padding: 0 15px  0 15px;
+    vertical-align: middle;
+}
+
+.botonNew {
+    margin-top: 25px;
+}
+
+.botonDet {
+    margin: 0 55px 0 55px;
+}

@@ -86,11 +86,13 @@ class Signup extends Component {
                             <Form.Group controlId="cnty">
                                 <Form.Label>País</Form.Label>
 
-                                <Form.Control as="select" name="country" onChange={this.handleInputChange} />
+                                <Form.Control as="select" name="country" onChange={this.handleInputChange} >
+                                    
                                 <option>Selecciona país</option>
                                    {this.state.countries && this.state.countries.map(elm =>
                                   <option value={elm._id} key={elm._id}> {elm.name} </option> )}
 
+                                </Form.Control>
                             </Form.Group>
 
 
