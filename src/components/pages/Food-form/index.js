@@ -15,12 +15,15 @@ class FoodForm extends Component {
             description: '',
             origin: '',
             img: '',
-            price: '',
-            protein: '',
-            fat: '',
-            carbs: '',
-            kcal: '',
-            stock: ''
+            price: '0',
+            protein: '0',
+            fat: '0',
+            carbs: '0',
+            kcal: '0',
+            stock: '0',
+            importTax: false,
+            owner_id: ''
+
         }
         this.foodsService = new FoodsService()
     }

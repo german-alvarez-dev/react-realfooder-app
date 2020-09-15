@@ -19,7 +19,7 @@ class Signup extends Component {
             loginInfo: {
                 username: '',
                 password: '',
-                country: '',
+                country: ''
             },
             errorMessage: ''
         }
