@@ -16,7 +16,7 @@ import './alimentos.css'
 
 import Form from 'react-bootstrap/Form'
 import Button from 'react-bootstrap/Button'
-import Image from 'react-bootstrap/Image'
+import Paper from '../../img/paperRecycle.png'
 import Modal from 'react-bootstrap/Modal'
 
 
@@ -28,9 +28,12 @@ class AlimentosPage extends Component {
             foods: [],
             Alimento: null,
             showModal: false,
-            isCreating: true,
+            //isCreating: true,
             filteredFoods: undefined,
-            name: ''
+            name: '',
+            userCountry: this.props.loggedInUser.country
+            //userId: props.loggedInUser._id,
+            //foodId: props.match.params.id
             
         }
         this.foodsService = new FoodsService()
@@ -58,7 +61,7 @@ class AlimentosPage extends Component {
 
 
     //handleModal = status => this.setState({ showModal: status })
-    handleModal = (status, id) => this.setState({ showModal: status, chef: id })
+    handleModal = (status, id) => this.setState({ showModal: status, food: id })
 
     finishFormSubmit = () => {
         this.handleModal(false)
@@ -75,9 +78,15 @@ class AlimentosPage extends Component {
     //     this.updateFoodsList()
     // }
 
-    filterFoods = foodie => {
+    // filterFoods = foodie => {
+    //     const foodsCopy = [...this.state.foods]
+    //     const filteredFoods = foodsCopy.filter(elm => elm.name.toLowerCase().includes(foodie.toLowerCase()))
+    //     this.setState({ filteredFoods })
+    // }
+
+    filterFoods = userCountry => {
         const foodsCopy = [...this.state.foods]
-        const filteredFoods = foodsCopy.filter(elm => elm.name.toLowerCase().includes(foodie.toLowerCase()))
+        const filteredFoods = foodsCopy.filter(elm => elm.origin.toLowerCase().includes(userCountry.toLowerCase()))
         this.setState({ filteredFoods })
     }
 
@@ -86,7 +95,9 @@ class AlimentosPage extends Component {
 
         const id = this.food_id
         const { loggedInUser } = this.props
-        const editingFood = this.state.foods ? this.state.foods.filter(elm => elm._id === this.state.foods)[0] : {}
+        const editingFood = this.state.filteredFoods ? this.state.filteredFoods.filter(elm => elm._id === this.state.filteredFfoods)[0] : {}
+        console.log(this.props.userCountry)
+        
         return (
             
             <Container className="alimentos-page">
@@ -94,7 +105,7 @@ class AlimentosPage extends Component {
                     <h1>Stock de alimentos</h1>
                     <p>Consulta los detalles de stock, precios y origen de nuestros alimentos</p>
                 </header>
-                <MiniToast classname="tablefood">Hola</MiniToast>
+                
                 <Row>
                     <Col md={4}>
                         <Form>
@@ -120,7 +131,9 @@ class AlimentosPage extends Component {
                             <Col md={12}>
                                 <Table className="tablefood" bordered>
                                    
-                                    {this.state.filteredFoods.map(elm =>
+                                    {this.state.filteredFoods.map(elm => 
+                                        // {
+                                        //    elm.origin.includes(this.props.loggedInUser.country) ?
 
                                         <tr>
                                             <td><img style={{ width: 50 }} src={elm.img} alt="alimento" /></td>
@@ -128,19 +141,19 @@ class AlimentosPage extends Component {
                                             <td>Precio: {elm.price}  | </td>
                                             <td>Stock: {elm.stock}</td>
                                             <td><Link to={`/details/${elm._id}`} className="botonDet btn btn-light btn-block btn-sm">Info detallada</Link></td>
-                                            <td>
-                                            {/* <Button><img src="../../img/paperRecycle.png" alt="paper" onClick={this.myfunction} /></Button> */}
-                                                 
-                                                {
-                                                    
-                                                     <Button onClick={() => this.deleteFood(id)} variant="info" size="sm" style={{ marginBottom: '20px', margin: '5px', marginLeft: '25px' }}>Eliminar</Button> 
-                                                }
-                                                {
-                                                     <Button onClick={() => this.handleModal(true, id)} variant="info" size="sm" style={{ marginBottom: '20px', margin: '5px' }}>Editar</Button> 
+                                                                                        
+                                                { 
+                                                this.props.loggedInUser._id === elm.owner_id  && <td> <Button variant="link" onClick={() => this.deleteFood(elm._id)}><img src={Paper} alt="delete" style={{ display: 'flex', width: '20px', height: '20px'}} /></Button> </td>
                                                 }
 
-                                            </td>
-                                        </tr>
+                                                {
+                                                this.props.loggedInUser._id === elm.owner_id && <td> <Button onClick={() => this.handleModal(true, id)} variant="info" size="sm" style={{ marginBottom: '20px', margin: '5px' }}>Editar</Button> </td>
+                                                }
+                                            
+                                        </tr> //: 
+
+                                        //}
+
                                     )}
 
                                 </Table>
@@ -150,19 +163,16 @@ class AlimentosPage extends Component {
                 }
                 <Modal size="lg" show={this.state.showModal} onHide={() => this.handleModal(false)}>
                     <Modal.Body>
-                        {this.state.isCreating
-                            ?
-                            <FoodForm onHide={this.onHide} editingFood={editingFood} finishFormSubmit={this.finishFormSubmit} />
-                            :
-                            <FoodForm onHide={this.onHide} finishFormSubmit={this.finishFormSubmit} isCreating />
-                        }
+                        
+                        <FoodForm {...this.props} handleItemSubmit={this.handleItemSubmit} />
+                        
                     </Modal.Body>
                 </Modal>
 
 
                 {/* <Modal size="lg" show={this.state.showModal} onHide={() => this.handleModal(false)}>
                     <Modal.Body>
-                        <FoodForm loggedInUser={this.props.loggedInUser} handleFormSubmit={this.handleFormSubmit} />
+                        <FoodForm loggedInUser={this.props.loggedInUser} finishFormSubmit={this.finishFormSubmit} />
                     </Modal.Body>
                 </Modal> */}
 

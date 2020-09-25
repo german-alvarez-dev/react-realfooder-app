@@ -12,7 +12,7 @@ class FoodForm extends Component {
         super(props)
         const { editingFood } = this.props
         this.state = {
-            id: editingFood ? editingFood._id : '', 
+            id: editingFood ? editingFood._id : '',
             name: editingFood ? editingFood.name : '',
             description: editingFood ? editingFood.description : '',
             origin: editingFood ? editingFood.origin : '',
@@ -30,10 +30,12 @@ class FoodForm extends Component {
         this.foodsService = new FoodsService()
     }
 
+
     handleInputChange = e => {
         const value = e.target.type === "file" ? e.target.files[0] : e.target.value
         this.setState({ [e.target.name]: value })
     }
+
 
     handleFormSubmit = e => {
         e.preventDefault()
@@ -173,7 +175,7 @@ export default FoodForm
 //             kcal: '0',
 //             stock: '0',
 //             importTax: false,
-//             owner_id: ''
+//             owner_id: props.loggedInUser._id
 
 //         }
 //         this.foodsService = new FoodsService()

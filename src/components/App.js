@@ -46,8 +46,8 @@ class App extends Component {
                     <Route path="/" exact component={IndexPage} />
                     <Route path="/login" render={props => <Login {...props} setTheUser={this.setTheUser} />} />
                     <Route path="/signup" render={props => <Signup {...props} setTheUser={this.setTheUser} />} />
-                    <Route exact path="/alimentos" render={() => <AlimentosPage loggedInUser={this.state.loggedInUser} {...this.props} />} />
-                    <Route path="/details/:food_id" render={props => <FoodDetails {...props} />} />
+                    <Route exact path="/alimentos" render={props => <AlimentosPage loggedInUser={this.state.loggedInUser} {...props} />} />
+                    <Route path="/details/:food_id" render={props => <FoodDetails loggedInUser={this.state.loggedInUser} {...props} />} />
                     <Route path="/foods/newFood" render={() => <FoodForm />} />
                 </Switch>
             </>

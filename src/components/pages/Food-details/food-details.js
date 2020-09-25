@@ -14,7 +14,8 @@ class FoodDetails extends Component {
     constructor(props) {
         super(props)
         this.state = {
-            foodDetails: [],
+            foodDetails: undefined
+            //foodDetails: []
         }
         this.foodsService = new FoodsService()
     }
@@ -22,7 +23,7 @@ class FoodDetails extends Component {
     componentDidMount = () => {
 
         const id = this.props.match.params.food_id
-        
+
         this.foodsService
             .getOneFood(id)
             .then(response => this.setState({ foodDetails: response.data }))
@@ -30,13 +31,13 @@ class FoodDetails extends Component {
 
     }
 
-    
+
     render() {
 
         return (
 
             !this.state.foodDetails ? <h3>CARGANDO</h3> :
-            
+
 
                 <Container as="main" fluid="md">
                     <Row>
@@ -73,24 +74,13 @@ class FoodDetails extends Component {
 
                                     <p>Origen</p>
                                     <hr></hr>
-                                    <p>{this.state.foodDetails.name} </p>
-                                    {/* procedente de: <lu> {this.state.foodDetails && this.state.foodDetails.map((elm,i) => {
-                                        return <li key={i}> {this.state.foodDetails.origin[elm]} </li>})
-                                        }</lu> </p>
-                                    */}
-                                    {/* {this.state.foodDetails && this.state.foodDetails.origin.map(elm=> <span>key={elm._id} elm={elm} </span>)} </p> */}
-{/* 
+                                    <p>{this.state.foodDetails.name} </p> procedente de:
                                     <lu>
-                                       {/* intento FAIL return ({this.state.origins.forEach(elm =>
-                                        <li>
-                                            {elm.origin}
-                                        </li> )}) */}
 
-                                        {/* <li>
-                                            {this.state.foodDetails.origin}
-                                        </li> *
+                                        {this.state.foodDetails && this.state.foodDetails.origin.map((elm, idx) => <li key={idx}> {elm} </li>)}
+
                                     </lu>
-                                     */}
+
                                 </Tab>
                                 <Tab eventKey="Stock" title="Stock" >
                                     <p>Stock</p>
@@ -104,7 +94,7 @@ class FoodDetails extends Component {
                         </Col>
                     </Row>
 
-                </Container>
+                </Container >
 
         )
     }

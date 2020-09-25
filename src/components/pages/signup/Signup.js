@@ -44,6 +44,7 @@ class Signup extends Component {
         let loginInfoCopy = { ...this.state.loginInfo }
         const { name, value } = e.target
         loginInfoCopy = { ...loginInfoCopy, [name]: value }
+        console.log(loginInfoCopy)
 
         this.setState({ loginInfo: loginInfoCopy })
     }
@@ -90,7 +91,7 @@ class Signup extends Component {
                                     
                                 <option>Selecciona país</option>
                                    {this.state.countries && this.state.countries.map(elm =>
-                                  <option value={elm._id} key={elm._id}> {elm.name} </option> )}
+                                  <option value={elm.name} key={elm._id}> {elm.name} </option> )}
 
                                 </Form.Control>
                             </Form.Group>
