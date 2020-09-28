@@ -12,7 +12,7 @@ import Login from './pages/login/Login'
 import AlimentosPage from './pages/alimentos/alimentos'
 import FoodDetails from './pages/Food-details/food-details'
 import FoodForm from './pages/Food-form/index'
-
+import CustomToast from './ui/MiniToast'
 
 import AuthService from '../service/auth.service'
 
@@ -20,7 +20,14 @@ class App extends Component {
 
     constructor() {
         super()
-        this.state = { loggedInUser: null }
+        this.state = { 
+            loggedInUser: null
+            // CustomToast: {
+            //     visible: false,
+            //     text: ''
+            //}
+         }
+        
         this.authService = new AuthService()
     }
 
@@ -35,21 +42,29 @@ class App extends Component {
     }
 
 
+    handleToast = (visible, text = '') => {
+        let toastCopy = { ...this.state.toast }
+        toastCopy = { visible, text }
+        this.setState({ toast: toastCopy })
+      }
+
     render() {
 
         this.fetchUser()
 
         return (
             <>
-                <Navbar setTheUser={this.setTheUser} loggedInUser={this.state.loggedInUser} />
+                <Navbar setTheUser={this.setTheUser} loggedInUser={this.state.loggedInUser} handleToast={this.handleToast} />
                 <Switch>
                     <Route path="/" exact component={IndexPage} />
                     <Route path="/login" render={props => <Login {...props} setTheUser={this.setTheUser} />} />
-                    <Route path="/signup" render={props => <Signup {...props} setTheUser={this.setTheUser} />} />
+                    <Route path="/signup" render={props => <Signup {...props} setTheUser={this.setTheUser} handleToast={this.handleToast}/>} />
                     <Route exact path="/alimentos" render={props => <AlimentosPage loggedInUser={this.state.loggedInUser} {...props} />} />
                     <Route path="/details/:food_id" render={props => <FoodDetails loggedInUser={this.state.loggedInUser} {...props} />} />
                     <Route path="/foods/newFood" render={() => <FoodForm />} />
                 </Switch>
+
+                <CustomToast {...this.state.toast} handleToast={this.handleToast} />
             </>
         )
     }

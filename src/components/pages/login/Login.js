@@ -40,6 +40,7 @@ class Login extends Component {
             .then(response => {
                 this.props.setTheUser(response.data)
                 this.props.history.push('/')
+                this.props.handleToast(true, 'Sesion iniciada')
             })
             .catch(err => console.log(err))
     }

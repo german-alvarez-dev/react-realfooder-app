@@ -11,7 +11,7 @@ export default class FoodsService {
     getAllFoods = () => this.service.get('/foods')
     getOneFood = _id => this.service.get(`/foods/details/${_id}`)
     createFood = food => this.service.post('/foods/newFood', food)    
-    deleteFood = _id => this.service.delete(`/foods/${_id}`)
-    editFood = (id,food) => this.service.put(`/getOneFood/${id}`,food)
+    deleteFood = (id) => this.service.delete(`/foods/delete/${id}`)
+    editFood = (id,food) => this.service.put(`/foods/delete/${id}`,food)
 
 }
