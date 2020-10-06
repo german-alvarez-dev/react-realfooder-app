@@ -33,14 +33,16 @@ class Navigation extends Component {
                         {
                             !this.props.loggedInUser ?
                                 <>
+                                    <Nav.Link as="div"><Link to="/estadisticas">Estadisticas</Link></Nav.Link>                                    
                                     <Nav.Link as="div"><Link to="/login">Iniciar sesión</Link></Nav.Link>
                                     <Nav.Link as="div"><Link to="/signup">Registro</Link></Nav.Link>
+
                                 </>
 
                                 :
                                 <>
                                     <Nav.Link as="div"><Link to="/alimentos">Alimentos</Link></Nav.Link>
-                                
+                                    <Nav.Link as="div"><Link to="/estadisticas">Estadisticas</Link></Nav.Link>
                                     <Nav.Link as="div" onClick={this.logout}>Cerrar sesión</Nav.Link>
                                 </>
 

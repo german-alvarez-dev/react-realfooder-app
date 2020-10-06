@@ -4,7 +4,7 @@ import React from 'react'
 
 const CustomToast = ({ visible, text, handleToast }) => {
     return (
-        <div style={{ padding: '30px', backgroundColor: 'orange', position: 'fixed', right: '10px', bottom: '10px', width: '300px' }} show={visible} onClose={() => handleToast(false)} delay={4000} autohide>
+        <div style={{ padding: '30px', backgroundColor: 'orange', position: 'fixed', right: '10px', bottom: '10px', width: '300px', zIndex: '999', transition: 'top 0,5s ease' }} show={visible} onClose={() => handleToast(false)} delay={4000} autohide>
                <span>Real Fooder App</span>
 
             <span> {text} </span>
