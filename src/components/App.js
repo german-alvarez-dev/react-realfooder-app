@@ -23,14 +23,14 @@ class App extends Component {
 
     constructor() {
         super()
-        this.state = { 
+        this.state = {
             loggedInUser: null,
             toast: {
                 visible: false,
                 text: ''
             }
-         }
-        
+        }
+
         this.authService = new AuthService()
     }
 
@@ -49,7 +49,20 @@ class App extends Component {
         let toastCopy = { ...this.state.toast }
         toastCopy = { visible, text }
         this.setState({ toast: toastCopy })
-      }
+    }
+
+    showMiniToast = () => {
+        this.setState({
+            bottom: 20,
+        }, () => {
+            setTimeout(() => {
+                this.setState({
+                    bottom: -100,
+                });
+            }, 3000)
+        })
+    }
+
 
     render() {
 
@@ -61,7 +74,7 @@ class App extends Component {
                 <Switch>
                     <Route path="/" exact component={IndexPage} />
                     <Route path="/login" render={props => <Login {...props} setTheUser={this.setTheUser} />} />
-                    <Route path="/signup" render={props => <Signup {...props} setTheUser={this.setTheUser} handleToast={this.handleToast}/>} />
+                    <Route path="/signup" render={props => <Signup {...props} setTheUser={this.setTheUser} handleToast={this.handleToast} />} />
                     <Route exact path="/alimentos" render={props => <AlimentosPage loggedInUser={this.state.loggedInUser} {...props} />} />
 
                     <Route exact path="/estadisticas" render={props => <EstadisticasPage {...props} />} />

@@ -26,8 +26,9 @@ class AlimentosPage extends Component {
         super(props)
         this.state = {
             foods: [],
-            //Alimento: null,
+            alimento: null,
             showModal: false,
+            isCreating: true,
             filteredFoods: undefined,
             name: '',
         }
@@ -58,8 +59,8 @@ class AlimentosPage extends Component {
     }
 
 
-    handleModal = status => this.setState({ showModal: status })
-    //handleModal = (status, id) => this.setState({ showModal: status, food: id })
+    //handleModal = status => this.setState({ showModal: status })
+    handleModal = (status, id) => this.setState({ showModal: status, food: id })
 
     finishFormSubmit = () => {
         this.handleModal(false)
@@ -86,13 +87,10 @@ class AlimentosPage extends Component {
 
     render() {
 
-        const id = this.food_id
-        const { loggedInUser } = this.props
-        const editingFood = this.state.filteredFoods ? this.state.filteredFoods.filter(elm => elm._id === this.state.filteredFoods)[0] : {}
+        const editingFood = this.state.alimento ? this.state.filteredFoods.filter(elm => elm._id === this.state.alimento)[0] : {}
+        
+        console.log(this.state.alimento, "alimento")
         console.log(editingFood)
-        console.log(this.props.loggedInUser.country)
-
-        //console.log(this.state.filteredFoods._id)
 
         return (
 
@@ -127,26 +125,26 @@ class AlimentosPage extends Component {
                             <Col md={12}>
                                 <Table className="tablefood" bordered>
 
-                                    {this.state.filteredFoods.map((elm) => {
-                                        return elm.origin.includes(this.props.loggedInUser.country) ?
+                                    {this.state.filteredFoods.map((alimento) => {
+                                        return alimento.origin.includes(this.props.loggedInUser.country) ?
 
 
                                             <tr>
-                                                <td><img style={{ width: 50 }} src={elm.img} alt="alimento" /></td>
-                                                <td>Nombre: {elm.name}</td>
-                                                <td>Precio: {elm.price}  | </td>
-                                                <td>Stock: {elm.stock}</td>
-                                                <td><Link to={`/details/${elm._id}`} className="botonDet btn btn-light btn-block btn-sm">Info detallada</Link></td>
-                                                {console.log(elm._id)}
+                                                <td><img style={{ width: 50 }} src={alimento.img} alt="alimento" /></td>
+                                                <td>Nombre: {alimento.name}</td>
+                                                <td>Precio: {alimento.price}  | </td>
+                                                <td>Stock: {alimento.stock}</td>
+                                                <td><Link to={`/details/${alimento._id}`} className="botonDet btn btn-light btn-block btn-sm">Info detallada</Link></td>
+                                                {/* {console.log(alimento._id)} */}
                                                 {
-                                                    this.props.loggedInUser._id === elm.owner_id && <td> <Button variant="link" onClick={() => this.deleteFood(elm._id)}><img src={Paper} alt="delete" style={{ display: 'flex', width: '20px', height: '20px' }} /></Button> </td>
+                                                    this.props.loggedInUser._id === alimento.owner_id && <td> <Button variant="link" onClick={() => this.deleteFood(alimento._id)}><img src={Paper} alt="delete" style={{ display: 'flex', width: '20px', height: '20px' }} /></Button> </td>
 
                                                 }
 
-                                                {/* {console.log(elm.origin.includes(this.props.loggedInUser.country))} */}
+                                                {/* {console.log(alimento.origin.includes(this.props.loggedInUser.country))} */}
 
                                                 {
-                                                    this.props.loggedInUser._id === elm.owner_id && <td> <Button onClick={() => this.handleModal(true, id)} variant="info" size="sm" style={{ marginBottom: '20px', margin: '5px' }}>Editar</Button> </td>
+                                                    this.props.loggedInUser._id === alimento.owner_id && <td> <Button onClick={() => this.handleModal(true, alimento._id)} variant="info" size="sm" style={{ marginBottom: '20px', margin: '5px' }}>Editar</Button> </td>
                                                 }
 
                                             </tr>
@@ -163,16 +161,16 @@ class AlimentosPage extends Component {
                 }
 
                 {/* Solo crear */}
-                <Modal size="lg" show={this.state.showModal} onHide={() => this.handleModal(false)}>
+                {/* <Modal size="lg" show={this.state.showModal} onHide={() => this.handleModal(false)}>
                     <Modal.Body>
 
                         <FoodForm {...this.props} handleFoodSubmit={this.handleFoodSubmit} />
 
                     </Modal.Body>
-                </Modal>
+                </Modal> */}
 
                 {/* Crear y editar */}
-                {/* <Modal size="lg" show={this.state.showModal} onHide={() => this.handleModal(false)}>
+                <Modal size="lg" show={this.state.showModal} onHide={() => this.handleModal(false)}>
                     <Modal.Body>
                             {this.state.isCreating
                             ?
@@ -182,7 +180,7 @@ class AlimentosPage extends Component {
                         }
                        
                     </Modal.Body>
-                </Modal> */}
+                </Modal>
 
             </Container>
 
