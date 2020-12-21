@@ -20,7 +20,7 @@
 
 - On the foods list, show an edit button for those products whose owner is the logged in user. 
 
-- When clicked, a modal window containing the product's info must appear. Reuse for this the same Form component and the same Bootstrap's Modal Window you developed to create new products (don't forget to change both the modal window title and the submit button text when editing).
+- When clicked, a modal window containing the product's info must appear. 
 
 - After saving the edited item, the product list must be refresed: <p>&nbsp;</p>
 
@@ -32,7 +32,7 @@
 
 ## Iteration 9: info toast
 
-- Create an info toast component with a similar appearance as the one below. Develop it manually, do not use any existing component from NPM, Bootstrap...
+- Create a custom info toast component with a similar appearance as the one below, or use Bootstrap's Toast Component. 
 
 - The info toast should appear when any of the actions are completed (_new item created successfully, item deleted sucessfully, item edited succesfully_): <p>&nbsp;</p>
 ![gif](https://res.cloudinary.com/ironhack-german/video/upload/e_loop/v1595256141/vid55.gif)
