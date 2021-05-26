@@ -7,7 +7,7 @@
 
 - On the foods list, show a delete button for those products whose owner is the logged in user. 
 
-- When clicked, the food must be removed from the database (you have the `https://reactr-realfooder.herokuapp.com/api/foods/delete/:id` endopoint (DELETE) to archieve this.
+- When clicked, the food must be removed from the database. You have the `https://reactr-realfooder.herokuapp.com/api/foods/delete/:id` endopoint (DELETE) to archieve this.
 
 - After removed from the database, the product list must be refresed: <p>&nbsp;</p>
 
