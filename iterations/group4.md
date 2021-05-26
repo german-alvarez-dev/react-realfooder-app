@@ -11,7 +11,7 @@
 
 - Once mounted, bring the foods info on the component (remember, the same endpoint on the backend that you used on the foods list) and use the 5 first foods to render 3 charts as the ones below: <p>&nbsp;</p>
 
-![gif](https://res.cloudinary.com/ironhack-german/video/upload/e_loop/v1622035145/Grabacio%CC%81n_de_pantalla_2021-05-26_a_las_15.17.23.gif)
+![gif](https://res.cloudinary.com/ironhack-german/video/upload/v1622035145/Grabacio%CC%81n_de_pantalla_2021-05-26_a_las_15.17.23.gif)
 <p>&nbsp;</p>
 <p>&nbsp;</p>
 
