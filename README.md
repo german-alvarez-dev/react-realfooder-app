@@ -1,6 +1,6 @@
 # React RealFooder SPA
 
-Spanish foods SPA application
+An amazing SPA about foods! Yay!
 
 ## Iterations
 
@@ -26,14 +26,14 @@ You will need to use an API based on the `https://reactr-realfooder.herokuapp.co
   
 ## Users available
 
-You have two existent users on the database, in case you need them to make your tests: 
+You already have two users on the database. Use them to make any test you need: 
 - **User 1** (username: `User 1`, pwd: `user 1`, origin `spain`)
 - **User 2** (username: `User 2`, pwd: `user 2`, origin `france`)
 
 
 ## Product reboot
 
-Have you created a bunch of food products that makes the application hard to manage? No worries! 
+Have you created a bunch of foods that makes the application hard to manage? No worries! 
 
 In case you need to reboot the foods <a href="https://reactr-realfooder.herokuapp.com/api/foods/reboot">proceed here</a>. The foods collection will be dropped and seeded with the default set of products. 
 
